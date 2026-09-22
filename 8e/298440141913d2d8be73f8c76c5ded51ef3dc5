@@ -1,0 +1,20 @@
+src/components/layout/MarketingLayout.tsx
+  h_07ca16c492ad43 45-51,78
+src/index.css
+  h_07ca16c492ad43 62-65,70-74,76-88,93
+src/routes/marketing/CharityProfile.tsx
+  h_07ca16c492ad43 135
+src/routes/marketing/Home.tsx
+  h_07ca16c492ad43 87,294-295
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8e298440141913d2d8be73f8c76c5ded51ef3dc5",
+  "prompts": {},
+  "humans": {
+    "h_07ca16c492ad43": {
+      "author": "Amey Ranaware <ranaware.amey@gmail.com>"
+    }
+  }
+}
