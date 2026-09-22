@@ -84,7 +84,7 @@ export function Home() {
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg">
-                  <Link to="/signup">
+                  <Link to="/login">
                     Subscribe from {formatCents(PRICE_MONTHLY_CENTS)}/mo
                     <ArrowRight />
                   </Link>
@@ -291,8 +291,8 @@ export function Home() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg">
-                <Link to="/signup">
-                  Create your account
+                <Link to="/login">
+                  Get started
                   <ArrowRight />
                 </Link>
               </Button>

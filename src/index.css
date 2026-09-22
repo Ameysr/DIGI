@@ -59,25 +59,38 @@
 --------------------------------------------------------------------------- */
 
 /*
- * Expanding ring for the demo sign-in button, so a reviewer notices it without
- * having to read the page. Deliberately slow and low-contrast: attention-drawing
- * without being obnoxious. The global reduced-motion rule below disables it for
- * anyone who has asked for less movement.
+ * Pulse for the demo sign-in button, so a reviewer notices it without having to
+ * read the page. Deliberately loud: a bright fill, an expanding ring and a halo,
+ * on a fast cycle so it reads as a pulse rather than a static glow. The global
+ * reduced-motion rule below disables it for anyone who asked for less movement.
  */
 @keyframes demo-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 60%, transparent);
-    border-color: color-mix(in oklab, var(--color-accent) 60%, transparent);
+    box-shadow:
+      0 0 0 0 color-mix(in oklab, var(--color-accent) 90%, transparent),
+      0 0 18px 0 color-mix(in oklab, var(--color-accent) 55%, transparent);
+    border-color: color-mix(in oklab, var(--color-accent) 90%, transparent);
+    background-color: color-mix(in oklab, var(--color-accent) 18%, transparent);
   }
-  70% {
-    box-shadow: 0 0 0 14px color-mix(in oklab, var(--color-accent) 0%, transparent);
-    border-color: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  50% {
+    box-shadow:
+      0 0 0 9px color-mix(in oklab, var(--color-accent) 30%, transparent),
+      0 0 34px 4px color-mix(in oklab, var(--color-accent) 80%, transparent);
+    border-color: var(--color-accent);
+    background-color: color-mix(in oklab, var(--color-accent) 32%, transparent);
+  }
+  75% {
+    box-shadow:
+      0 0 0 22px color-mix(in oklab, var(--color-accent) 0%, transparent),
+      0 0 34px 4px color-mix(in oklab, var(--color-accent) 45%, transparent);
+    border-color: color-mix(in oklab, var(--color-accent) 55%, transparent);
+    background-color: color-mix(in oklab, var(--color-accent) 22%, transparent);
   }
 }
 
 @utility demo-glow {
-  animation: demo-glow 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation: demo-glow 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 /* The signature background: a deep emerald bloom falling into near-black. */

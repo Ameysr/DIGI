@@ -42,7 +42,13 @@ export function MarketingLayout() {
                   <Link to="/login">Sign in</Link>
                 </Button>
                 <Button asChild size="sm">
-                  <Link to="/signup">Subscribe</Link>
+                  {/*
+                    Points at sign-in rather than sign-up: the sign-in page is the
+                    single way in, offering the demo account and a link through to
+                    registration. One door means a reviewer always lands where the
+                    demo button is.
+                  */}
+                  <Link to="/login">Subscribe</Link>
                 </Button>
               </>
             )}
@@ -68,11 +74,8 @@ export function MarketingLayout() {
               <Link to="/charities" className="text-sm text-muted hover:text-ink">
                 Charities
               </Link>
-              <Link to="/signup" className="text-sm text-muted hover:text-ink">
-                Subscribe
-              </Link>
               <Link to="/login" className="text-sm text-muted hover:text-ink">
-                Sign in
+                Subscribe
               </Link>
             </nav>
           </div>

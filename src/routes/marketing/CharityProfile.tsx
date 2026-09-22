@@ -132,7 +132,7 @@ export function CharityProfile() {
             goes here every month.
           </p>
           <Button asChild>
-            <Link to="/signup">Subscribe</Link>
+            <Link to="/login">Subscribe</Link>
           </Button>
         </div>
       </Reveal>
