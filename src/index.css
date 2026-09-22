@@ -58,6 +58,28 @@
    Custom utilities
 --------------------------------------------------------------------------- */
 
+/*
+ * Expanding ring for the demo sign-in button, so a reviewer notices it without
+ * having to read the page. Deliberately slow and low-contrast: attention-drawing
+ * without being obnoxious. The global reduced-motion rule below disables it for
+ * anyone who has asked for less movement.
+ */
+@keyframes demo-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 60%, transparent);
+    border-color: color-mix(in oklab, var(--color-accent) 60%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 14px color-mix(in oklab, var(--color-accent) 0%, transparent);
+    border-color: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  }
+}
+
+@utility demo-glow {
+  animation: demo-glow 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
 /* The signature background: a deep emerald bloom falling into near-black. */
 @utility aurora {
   background-color: var(--color-night);

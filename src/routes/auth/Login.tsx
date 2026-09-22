@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
+import { Sparkles } from 'lucide-react'
 import { AuthShell } from '@/routes/auth/AuthShell'
 import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -117,6 +118,9 @@ export function Login() {
       {/*
         Only rendered when VITE_DEMO_EMAIL and VITE_DEMO_PASSWORD are set, so a
         production build without them ships no demo credentials and no button.
+
+        Styled as the loudest thing on the page on purpose: a reviewer should be
+        able to get in without reading anything.
       */}
       {demoCredentials ? (
         <div className="flex flex-col gap-4">
@@ -126,14 +130,20 @@ export function Login() {
             <span className="h-px flex-1 bg-line" />
           </div>
 
-          <Button type="button" variant="secondary" onClick={handleDemoLogin} disabled={demoBusy}>
-            {demoBusy ? <Spinner /> : null}
+          <Button
+            type="button"
+            size="lg"
+            onClick={handleDemoLogin}
+            disabled={demoBusy}
+            className="demo-glow border border-accent/60 bg-accent/12 text-accent hover:bg-accent/20"
+          >
+            {demoBusy ? <Spinner /> : <Sparkles />}
             Continue as demo subscriber
           </Button>
 
           <p className="text-center text-xs text-muted">
-            Signs you in to a pre-filled account — an active plan and five logged scores — so you can
-            see the whole platform without subscribing.
+            One click, no account needed — signs you in to a pre-filled subscriber with an active
+            plan and five logged scores, so you can see the whole platform.
           </p>
         </div>
       ) : null}
