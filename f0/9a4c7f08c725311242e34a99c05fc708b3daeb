@@ -1,0 +1,24 @@
+src/components/auth/AuthLinkErrorScreen.tsx
+  h_07ca16c492ad43 1-61
+src/index.css
+  h_07ca16c492ad43 61-82
+src/lib/auth/linkError.test.ts
+  h_07ca16c492ad43 1-46
+src/lib/auth/linkError.ts
+  h_07ca16c492ad43 1-59
+src/main.tsx
+  h_07ca16c492ad43 7,10,22-29
+src/routes/auth/Login.tsx
+  h_07ca16c492ad43 3,121-123,133-140,145-146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f09a4c7f08c725311242e34a99c05fc708b3daeb",
+  "prompts": {},
+  "humans": {
+    "h_07ca16c492ad43": {
+      "author": "Amey Ranaware <ranaware.amey@gmail.com>"
+    }
+  }
+}
